@@ -33,12 +33,12 @@ else
     echo "Git is already installed, nothing to do.."
 fi
 
-dnf list installed qmysql
+dnf list installed mysql
 
 if [ $? -ne 0 ]
 then
     echo "MySQL is not installed...going to install"
-    dnf install mysql -y
+    dnf install dmysql -y
     VALIDATE $? "Installing MySQL"
 else
     echo "MySQL is already installed..nothing to do"
